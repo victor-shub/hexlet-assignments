@@ -12,11 +12,12 @@ class App {
             lettersList.add(letter);
         }
         char[] wordCharArray = word.toLowerCase().toCharArray();
-        for (var wordLetter: wordCharArray) {
+        for (char wordLetter: wordCharArray) {
             if (!lettersList.contains(wordLetter)) {
                 return false;
             }
-            lettersList.remove(wordLetter);
+            var index = lettersList.indexOf(wordLetter);
+            lettersList.set(index, null);
         }
         return true;
     }
