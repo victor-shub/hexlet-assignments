@@ -11,7 +11,7 @@ public class App {
         for (var letter: lettersArray) {
             lettersList.add(letter);
         }
-        char[] wordCharArray = word.toCharArray();
+        char[] wordCharArray = word.toLowerCase().toCharArray();
         for (var wordLetter: wordCharArray) {
             if (!lettersList.contains(wordLetter)) {
                 return false;
