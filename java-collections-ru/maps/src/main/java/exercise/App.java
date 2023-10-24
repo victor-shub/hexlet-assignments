@@ -11,6 +11,9 @@ public class App {
     }
 
     public static String toString(Map<String, Integer> wordsCount) {
+        for (Map.Entry<String, Integer> wordCount: wordsCount.entrySet()) {
+            System.out.println(wordCount.getKey() + ": " + wordCount.getValue());
+        }
         return "";
     }
 }
