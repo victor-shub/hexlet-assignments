@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // BEGIN
-public class App {
+class App {
     public static boolean scrabble(String lettersString, String word) {
         char[] lettersArray = lettersString.toCharArray();
         List<Character> lettersList = new ArrayList<>(lettersArray.length);
