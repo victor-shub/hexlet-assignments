@@ -10,11 +10,14 @@ public class App {
         return wordsCount;
     }
 
-    public static String toString(Map<String, Integer> wordsCount) {
-        for (Map.Entry<String, Integer> wordCount: wordsCount.entrySet()) {
-            System.out.println(wordCount.getKey() + ": " + wordCount.getValue());
+    public static String toString(Map<String, Integer> map) {
+        var result = new StringBuilder();
+        result.append("{/n");
+        for (Map.Entry<String, Integer> keyValuePair : map.entrySet()) {
+            result.append("  ").append(keyValuePair.getKey()).append(": ").append(keyValuePair.getValue()).append("/n");
         }
-        return "";
+        result.append("}");
+        return result.toString();
     }
 }
 //END
